@@ -12,6 +12,7 @@ PmaApp::Application.routes.draw do
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
   match '/show', to: 'events#show'
+  match '/new', to: 'events#new'
 
   get "events/show"
 

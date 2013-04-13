@@ -1,2 +1,21 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="center hero-unit">
+	<% provide(:title, 'Add an Event') %>
+	<h1>Add an Event</h1>
+
+	<%= form_for(@event) do |f| %>
+
+	Date
+	<%= f.date_select :date,
+	:start_year=>2013,
+    :use_short_month=>true,
+    :class=>'date_select' %>
+
+	<%= f.label :location %>
+	<%= f.text_field :location %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.submit "Create the event", class: "btn btn-large btn-primary" %>
+	<% end %>
+</div>
