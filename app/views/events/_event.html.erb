@@ -1,3 +1,15 @@
 <li>
-	<%= event.name %>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<%= dom_id(event) %>">
+				<%= event.name %>
+			</a>
+		</div>
+		<div id="<%= dom_id(event) %>" class="accordion-body collapse">
+			<div class="accordion-inner">
+					<p>Location: <%= event.location %></p>
+					<p>Date: <%= event.date %></p>
+			</div>
+		</div>
+	</div>
 </li> 
