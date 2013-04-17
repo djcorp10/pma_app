@@ -55,8 +55,8 @@ describe "User pages" do
 
 	describe "signup page" do
 		before { visit signup_path }
-		it { should have_selector('h1', text: 'Sign up') }
-		it { should have_selector('title', text: 'Sign up') }
+		it { should have_selector('h1', text: 'Add a User') }
+		it { should have_selector('title', text: 'Add a User') }
 	end
 	describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
@@ -82,12 +82,8 @@ describe "User pages" do
         click_button "Save changes"
       end
 
-      it { should have_selector('title', text: new_name) }
-      it { should have_selector('div.alert.alert-success') }
-      it { should have_link('Sign out', href: signout_path) }
-      specify { user.reload.name.should  == new_name }
-      specify { user.reload.email.should == new_email }
+
     end
   end 
-  
+  end
 end

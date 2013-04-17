@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Request do
 	before do
-		@request = Request.new(date: (2012, 10, 10), email: "user@example.com", phone: 5074587654)
+		@request = Request.new(date: 2012-10-10, email: "user@example.com", phone: 5074587654)
 	end
 
 	subject { @request }

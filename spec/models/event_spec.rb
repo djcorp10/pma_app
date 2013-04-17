@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Event do
   before do
-    @event = Event.new(date: (2012, 10, 10), location: "Toner Center", name: "Example Event", :user_id 0)
+    @event = Event.new(date: 2012-10-10, location: "Toner Center", name: "Example Event", user_id: 0)
   end
 
   subject { @event }
