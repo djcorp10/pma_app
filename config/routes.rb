@@ -4,6 +4,7 @@ PmaApp::Application.routes.draw do
   resources :users
   resources :events
   resources :quotes
+  resources :items
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',  to: 'users#new'
@@ -13,6 +14,7 @@ PmaApp::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/show', to: 'events#show'
   match '/new', to: 'events#new'
+  match '/newitem', to: 'items#new'
 
   get "events/show"
 
@@ -29,6 +31,8 @@ PmaApp::Application.routes.draw do
   get "quotes/new"
 
   get "events/new"
+
+  get "items/new"
 
 
   # The priority is based upon order of creation:

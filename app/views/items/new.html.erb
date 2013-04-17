@@ -1,2 +1,15 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<div class="center hero-unit">
+	<% provide(:title, 'Add an Item') %>
+	<h1 style="color:red">Add an Item</h1>
+
+	<%= form_for(@item) do |f| %> 
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :qty %>
+	<%= f.text_field :qty %>
+
+	<%= f.submit "Create the item", class: "btn btn-large btn-primary" %>
+	<% end %>
+</div>

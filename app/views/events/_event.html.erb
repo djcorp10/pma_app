@@ -9,6 +9,11 @@
 			<div class="accordion-inner">
 					<p>Location: <%= event.location %></p>
 					<p>Date: <%= event.date %></p>
+					<% if current_user != nil %>
+					<% if current_user.admin? %>
+					| <%= link_to "delete", event, method: :delete, confirm: "You sure?" %>
+					<% end %>
+					<% end %>
 			</div>
 		</div>
 	</div>
