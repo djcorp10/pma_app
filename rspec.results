@@ -1,0 +1,15 @@
+*............................................**
+
+Pending:
+  EventsHelper add some examples to (or delete) C:/Sites/pma_app/spec/helpers/events_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/events_helper_spec.rb:14
+  events/new.html.erb add some examples to (or delete) C:/Sites/pma_app/spec/views/events/new.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/events/new.html.erb_spec.rb:4
+  welcome/hiu.html.erb add some examples to (or delete) C:/Sites/pma_app/spec/views/welcome/hiu.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/welcome/hiu.html.erb_spec.rb:4
+
+Finished in 8.27 seconds
+47 examples, 0 failures, 3 pending
