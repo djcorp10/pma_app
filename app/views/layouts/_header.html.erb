@@ -12,8 +12,8 @@
           <% if signed_in? %>
             <% if admin? %>
               <li><%= link_to "Add Member", signup_path %></li>
-              <li><%= link_to "Add Event", new_path %></li>
-              <li><%= link_to "Add Item", newitem_path %></li>
+              <li><%= link_to "Add Event", new_event_path %></li>
+              <li><%= link_to "Add Item", new_item_path %></li>
             <% end %>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

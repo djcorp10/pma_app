@@ -12,9 +12,6 @@ PmaApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
-  match '/show', to: 'events#show'
-  match '/new', to: 'events#new'
-  match '/newitem', to: 'items#new'
 
   get "events/show"
 
@@ -25,8 +22,6 @@ PmaApp::Application.routes.draw do
   get "welcome/hiu"
 
   get "items/new"
-
-  get "categories/new"
 
   get "quotes/new"
 
