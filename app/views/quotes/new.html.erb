@@ -1,2 +1,11 @@
-<h1>Quotes#new</h1>
-<p>Find me in app/views/quotes/new.html.erb</p>
+<div class="center hero-unit">
+	<% provide(:title, 'Create a Quote') %>
+	<h1 style="color:red">Create a Quote</h1>
+
+	<%= form_for(@quote) do |f| %> 
+
+	
+
+	<%= f.submit "Create the quote", class: "btn btn-large btn-primary" %>
+	<% end %>
+</div>

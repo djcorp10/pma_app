@@ -9,6 +9,7 @@
           <li> <%= link_to "Events", events_path %> </li>
           <li> <%= link_to "Equipment Rental", items_path %> </li>
           <li> <%= link_to "Users", users_path %> </li>
+          <li> <%= link_to "Quote", new_quote_path %> </li>
           <% if signed_in? %>
             <% if admin? %>
               <li><%= link_to "Add Member", signup_path %></li>
