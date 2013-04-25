@@ -3,7 +3,9 @@ PmaApp::Application.routes.draw do
 
   resources :users
   resources :events
-  resources :quotes
+  resources :quotes do
+    resources :items
+  end
   resources :items
   resources :sessions, only: [:new, :create, :destroy]
 

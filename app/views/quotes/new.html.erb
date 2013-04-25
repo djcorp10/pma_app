@@ -4,7 +4,24 @@
 
 	<%= form_for(@quote) do |f| %> 
 
+	Date
+	<%= f.date_select :date,
+	:start_year=>2013,
+    :use_short_month=>true,
+    :class=>'date_select' %>
 
-	<%= f.submit "Get quote", class: "btn btn-large btn-primary" %>
+    <%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+
+ 	<% @items.each do |item| %>
+ 		<label class="checkbox">
+			<input type="checkbox"> <%= item.name %>
+		</label>
+	<% end %>
+
+	<%= f.submit "Get quote", class: "btn btn-large btn-primary" %> 
 	<% end %>
 </div>

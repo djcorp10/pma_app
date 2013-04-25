@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   def new
+    @items = Item.all
   	@quote = Quote.new
   end
 
