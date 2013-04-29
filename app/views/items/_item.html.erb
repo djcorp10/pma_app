@@ -8,6 +8,7 @@
 		<div id="<%= dom_id(item) %>" class="accordion-body collapse">
 			<div class="accordion-inner">
 					<p>Quantity: <%= item.qty %></p>
+					<p>Cost: $<%= item.cost %></p>
 					<% if current_user != nil %>
 					<% if current_user.admin? %>
 					| <%= link_to "delete", item, method: :delete, confirm: "You sure?" %>
