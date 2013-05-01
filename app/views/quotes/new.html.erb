@@ -13,13 +13,18 @@
     <%= f.label :email %>
 	<%= f.text_field :email %>
 
-	<%= f.label :phone %>
+	<%= f.label :phone %>(i.e. 5074247658)
 	<%= f.text_field :phone %>
 
  	<% @items.each do |item| %>
- 		<label class="checkbox">
+ 		$<%= item.cost %>
+ 		<%= check_box_tag(:item) %>
+ 		<%= label_tag(:item, item.name) %>
+
+
+ 		<!-- <label class="checkbox">
 			<input type="checkbox"> <%= item.name %>, $<%= item.cost %>
-		</label>
+		</label> -->
 	<% end %>
 
 	<%= f.submit "Get quote", class: "btn btn-large btn-primary" %> 
