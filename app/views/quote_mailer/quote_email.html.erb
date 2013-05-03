@@ -4,13 +4,30 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>You have a new quote</h1>
+    <h1>A new quote has been made</h1>
     <p>
-      You have successfully made a quote.<br/>
+      A new quote has been submitted by: <%= @quote.email %><br/>
+    </p>
+
+    <p>
+      The items requested are:
+      <% @quote.item_ids.each do |f| %>
+        <%= Item.find_by_id(f).name %>
+      <% end %>
+    </p>
+
+    <<!-- p>
+      Total cost of quote:
+      item_ids = params[:quote][:item_ids]
+      sum = 0
+      item_ids.each { |a| sum+=a.to_i }
+    </p>
+ -->    
+    <p>
+      To visit the app, just follow this link: <%= @url %>.
     </p>
     <p>
-      To login to the site, just follow this link: <%= @url %>.
+      Please respond to <%= @quote.email %> as soon as possible.
     </p>
-    <p>Thanks for joining and have a great day!</p>
   </body>
 </html>

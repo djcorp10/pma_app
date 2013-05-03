@@ -11,11 +11,11 @@ class QuotesController < ApplicationController
     @quote = Quote.create(params[:quote])
     if @quote.save
       flash[:success] = "Quote sent to Admin."
-      # begin
+      begin
         QuoteMailer.quote_email(@quote).deliver
-      # rescue
-      #   puts "***!!!Mail not sent!!!***"
-      # end
+      rescue
+        puts "***!!!Mail not sent!!!***"
+      end
       redirect_to new_quote_path
     else
       flash[:fail] = "Quote incorrect."
