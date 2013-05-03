@@ -48,6 +48,6 @@ PmaApp::Application.configure do
     :domain => "railscasts.com",
     :user_name => "railscasts",
     :password => "secret",
-    :authentication => "plain",
+    :authentication => :plain,
     :enable_starttls_auto => true }
 end

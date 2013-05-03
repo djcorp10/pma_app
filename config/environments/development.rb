@@ -43,6 +43,6 @@ PmaApp::Application.configure do
   :domain               => 'thedomain.com',
   :user_name            => 'admin@thedomain.com',
   :password             => '<password>',
-  :authentication       => 'plain',
+  :authentication       => :plain,
   :enable_starttls_auto => true  }
 end
