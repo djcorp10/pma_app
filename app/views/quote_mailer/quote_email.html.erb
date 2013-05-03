@@ -12,17 +12,16 @@
     <p>
       The items requested are:
       <% @quote.item_ids.each do |f| %>
-        <%= Item.find_by_id(f).name %>
+        <p><%= Item.find_by_id(f).name %></p>
       <% end %>
     </p>
 
-    <<!-- p>
+    <p>
+      @sum = 0
       Total cost of quote:
-      item_ids = params[:quote][:item_ids]
-      sum = 0
-      item_ids.each { |a| sum+=a.to_i }
+      <%= @quote.item_ids.each { |a| @sum+=a.to_i } %>
     </p>
- -->    
+    
     <p>
       To visit the app, just follow this link: <%= @url %>.
     </p>
