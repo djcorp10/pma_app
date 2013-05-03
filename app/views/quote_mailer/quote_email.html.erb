@@ -16,7 +16,12 @@
       <% end %>
     </p>
 
-  
+    <p>
+      Total cost of quote:
+      <% @quote.item_ids.each do |f| %>
+        <p>$<%= Item.find_by_id(f).cost %></p>
+      <% end %>
+    </p>
     
     <p>
       To visit the app, just follow this link: <%= @url %>.
