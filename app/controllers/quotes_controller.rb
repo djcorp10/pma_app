@@ -14,7 +14,7 @@ class QuotesController < ApplicationController
       begin
         QuoteMailer.quote_email(@quote).deliver
       rescue
-        puts "Mail not sent."
+        puts "***!!!Mail not sent!!!***"
       end
       redirect_to new_quote_path
     else
