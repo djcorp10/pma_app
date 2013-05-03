@@ -39,9 +39,9 @@ PmaApp::Application.configure do
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'baci.lindsaar.net',
-    :user_name => 'tripleberryflip',
-    :password => 'number11',
-    :authentication => 'plain',
+    :domain => "railscasts.com",
+    :user_name => "railscasts",
+    :password => "secret",
+    :authentication => "plain",
     :enable_starttls_auto => true }
 end
