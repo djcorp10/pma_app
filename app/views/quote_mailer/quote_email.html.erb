@@ -18,7 +18,7 @@
 
     <p>
       Total cost of quote:
-      @quote.item_ids.sum { |a| Item.find_by_id(a).cost }
+      <%= @quote.item_ids.sum { |a| Item.find_by_id(a).cost } %>
       <% @quote.item_ids.each do |f| %>
         <p>$<%= Item.find_by_id(f).cost %></p>
       <% end %>
