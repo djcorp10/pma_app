@@ -2,31 +2,5 @@
 	<% provide(:title, 'Get Quote') %>
 	<h1 style="color:red">Get Quote</h1>
 
-	<%= form_for(@quote) do |f| %> 
-
-	Date
-	<%= f.date_select :date,
-	:start_year=>2013,
-    :use_short_month=>true,
-    :class=>'date_select' %>
-
-    <%= f.label :email %>
-	<%= f.text_field :email %>
-
-	<%= f.label :phone %>(i.e. 5074247658)
-	<%= f.text_field :phone %>
-
- 	<% @items.each do |item| %>
- 		$<%= item.cost %>
- 		<%= check_box_tag(:item) %>
- 		<%= label_tag(:item, item.name) %>
-
-
- 		<!-- <label class="checkbox">
-			<input type="checkbox"> <%= item.name %>, $<%= item.cost %>
-		</label> -->
-	<% end %>
-
-	<%= f.submit "Get quote", class: "btn btn-large btn-primary" %> 
-	<% end %>
+	<%= render 'form' %>
 </div>

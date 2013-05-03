@@ -1,14 +1,21 @@
 class QuotesController < ApplicationController
   def new
-    @items = Item.all
+    # @items = Item.all
   	@quote = Quote.new
   end
 
   def create
-    @quote = Quote.new(params[:quote])
+    # item_ids = params[:quote][:item_ids]
+    # sum = 0
+    # item_ids.each { |a| sum+=a.to_i }
+    @quote = Quote.create(params[:quote])
     if @quote.save
       flash[:success] = "Quote sent to Admin."
-      QuoteMailer.quote_email(@quote).deliver
+      begin
+        QuoteMailer.quote_email(@quote).deliver
+      rescue
+        puts "Mail not sent."
+      end
       redirect_to new_quote_path
     else
       flash[:fail] = "Quote incorrect."
@@ -22,4 +29,5 @@ class QuotesController < ApplicationController
     #   render 'new/quote'
     # end 
   end
+
 end

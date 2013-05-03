@@ -1,8 +1,8 @@
 class Item < ActiveRecord::Base
-  attr_accessible :name, :qty, :cost
+  attr_accessible :name, :qty, :cost, :quote_id
 
   belongs_to :quote
-  accepts_nested_attributes_for :quote
+  # accepts_nested_attributes_for :quote
 
   validates :name, presence: true
   validates :qty, presence: true

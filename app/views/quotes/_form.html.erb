@@ -1,0 +1,33 @@
+<%= form_for(@quote) do |f| %> 
+
+Date
+<%= f.date_select :date,
+:start_year=>2013,
+:use_short_month=>true,
+:class=>'date_select' %>
+
+<%= f.label :email %>
+<%= f.text_field :email %>
+
+<%= f.label :phone %>(i.e. 5074247658)
+<%= f.text_field :phone %>
+
+<% Item.all.each do |item| %>
+<h4>
+	<%= hidden_field_tag "quote[item_ids][]" %>
+	<%= check_box_tag "quote[item_ids][]", item.id -%>
+	<%= h item.name %> $<%= h item.cost %>
+</h4>
+<% end %>
+
+<!-- <% f.fields_for :items do |builder| %> -->
+<!-- <p> -->
+	<!-- <%= builder.label :name, item.name %><br /> -->
+	<!-- <%= builder.text_field :name %> -->
+<!-- </p> -->
+<!-- <% end %> -->
+
+
+
+<%= f.submit "Get quote", class: "btn btn-large btn-primary" %> 
+<% end %>

@@ -1,8 +1,8 @@
 class Quote < ActiveRecord::Base
-  attr_accessible :date, :email, :phone, :cost
+  attr_accessible :date, :email, :phone, :item_ids
 
-  has_many :requested_items, dependent: :destroy
   has_many :items
+  accepts_nested_attributes_for :items, :reject_if => lambda { |a| a[:id].blank? }
 
   validates :date, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -12,5 +12,5 @@ class Quote < ActiveRecord::Base
   validates :phone, presence:   true,
                     format:     { with: VALID_PHONE_REGEX },
                     length: { is: 10 }
-  validates :cost, presence: true
+  # validates :cost, presence: true
 end
