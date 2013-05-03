@@ -41,8 +41,8 @@ PmaApp::Application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'baci.lindsaar.net',
-    :user_name => '<username>',
-    :password => '<password',
+    :user_name => 'davidcorpstein',
+    :password => 'explorer01',
     :authentication => 'plain',
     :enable_starttls_auto => true }
 end
