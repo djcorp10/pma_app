@@ -36,18 +36,18 @@ PmaApp::Application.configure do
   config.active_support.deprecation = :stderr
 
   # Speed up tests by lowering BCrypt's cost function.
-  require 'bcrypt'
-  silence_warnings do
-    BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
-  end 
+  # require 'bcrypt'
+  # silence_warnings do
+  #   BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+  # end 
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => "railscasts.com",
-    :user_name => "railscasts",
-    :password => "secret",
-    :authentication => :plain,
+    :domain => 'baci.lindsaar.net',
+    :user_name => '<username>',
+    :password => '<password>',
+    :authentication => 'plain',
     :enable_starttls_auto => true }
 end

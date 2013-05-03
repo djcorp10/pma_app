@@ -31,7 +31,7 @@ PmaApp::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :debug
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -73,9 +73,9 @@ PmaApp::Application.configure do
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => "railscasts.com",
-    :user_name => "railscasts",
-    :password => "secret",
-    :authentication => :plain,
+    :domain => 'baci.lindsaar.net',
+    :user_name => '<username>',
+    :password => '<password>',
+    :authentication => 'plain',
     :enable_starttls_auto => true }
 end
