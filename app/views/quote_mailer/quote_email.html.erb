@@ -18,17 +18,15 @@
 
     <p>
       Total cost of quote:
-      <%= @quote.item_ids.sum { |a| Item.find_by_id(a).cost } %>
-      <% @quote.item_ids.each do |f| %>
-        <p>$<%= Item.find_by_id(f).cost %></p>
-      <% end %>
+      $<%= @quote.item_ids.sum { |a| Item.find_by_id(a).cost } %>
     </p>
     
     <p>
       To visit the app, just follow this link: <%= @url %>.
     </p>
-    <p>
+    <h1>
       Please respond to <%= @quote.email %> as soon as possible.
-    </p>
+    </h1>
+    <p>Also available to call at <%= @quote.phone %></p>
   </body>
 </html>
